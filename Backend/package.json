@@ -1,0 +1,39 @@
+{
+  "name": "media-app-backend",
+  "version": "1.0.0",
+  "description": "Backend for Favorite Movies & TV Shows app",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.6.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "nodemon": "^3.0.1",
+    "prisma": "^5.6.0"
+  },
+  "keywords": [
+    "movies",
+    "tv-shows",
+    "backend"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
