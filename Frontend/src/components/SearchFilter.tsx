@@ -17,7 +17,9 @@ export const SearchFilter: React.FC<SearchFilterProps> = ({
   const [searchValue, setSearchValue] = useState(filters.search);
 
   const debouncedSearchHandler = useCallback((search: string) => {
-    const handler = () => onFiltersChange({ ...filters, search });
+    const handler = async () => {
+      onFiltersChange({ ...filters, search });
+    };
     debounce(handler, debounceDelay)();
   }, [filters, onFiltersChange, debounceDelay]);
 
